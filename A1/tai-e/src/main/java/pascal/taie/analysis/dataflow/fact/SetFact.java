@@ -22,6 +22,7 @@
 
 package pascal.taie.analysis.dataflow.fact;
 
+import pascal.taie.ir.exp.Var;
 import pascal.taie.util.collection.CollectionUtils;
 import pascal.taie.util.collection.Sets;
 
@@ -94,6 +95,7 @@ public class SetFact<E> {
 
     /**
      * @return a new fact which is the union of this and other facts.
+     * @param other
      */
     public SetFact<E> unionWith(SetFact<E> other) {
         SetFact<E> result = copy();
